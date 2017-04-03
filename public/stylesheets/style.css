@@ -31,9 +31,22 @@ input, select {
   background: white;
   color: #666;
 }
+.sane{
+  font-family: Helvetica;
+}
+.crazy{
+  font-family: 'comic-sans';
+}
+.psycho {
+  font-family: webdings;
+}
+
 
 .properties-form-container {
   border: 2px solid #666;
   border-radius: 6px;
   padding-bottom: 20px;
+}
+ul li {
+  list-style-type: none;
 }

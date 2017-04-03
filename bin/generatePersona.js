@@ -8,10 +8,25 @@ function generatePersona(cookie) {
   } else {
     persona = evil;
   }
-  persona['likes'].push(cookie.favFood, cookie.color);
+
+  persona.styles["insanity"] = setInsanityAttr(cookie.insanity);
+  persona["likes"].push(cookie.favFood, cookie.color);
   persona.insanity = cookie.insanity;
 
   return persona;
+}
+
+function setInsanityAttr(num) {
+  console.log("into the function");
+  num = Number(num);
+
+  if (num < 4) {
+    return "sane";
+  } else if (num >= 4 && num < 7) {
+    return "crazy";
+  } else {
+    return "psycho";
+  }
 }
 
 module.exports = generatePersona;
