@@ -42,12 +42,14 @@
   <h2>Not So Favorite Things</h2>
   <ul>
   {{#each persona.dislikes as |dislike|}}
-    <li>{{ldisike}}</li>
+    <li>{{disike}}</li>
   {{/each}}
   </ul>
 </div>
 <div>
+  <h2>Bio for Insanity Level: {{persona.insanityLevel}}</h2>
 
+ <p>{{persona.bio}}</p>
 </div>
 
 </div>

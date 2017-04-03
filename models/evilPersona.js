@@ -1,16 +1,16 @@
 const evil = {
-    likes: [
-    'puppies',
-    'doggies',
-    'pizza',
-    'anatomically correct hearts',
-    'death metal'
-    ],
+  likes: ["cats", "Brunch", "Donald Trump", "Bill O'Rielly"],
 
-  dislikes: [],
+  dislikes: [
+    "puppies",
+    "doggies",
+    "pizza",
+    "anatomically correct hearts",
+    "death metal"
+  ],
   styles: {
     page: "container evil"
   }
-}
+};
 
-module.exports = evil
+module.exports = evil;
