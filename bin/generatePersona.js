@@ -8,11 +8,9 @@ function generatePersona(cookie) {
   } else {
     persona = evil;
   }
-  //persona.likes.push(cookie.favFood, cookie.color);
-  // persona.favFood = cookie.favFood;
-  // persona.color = cookie.color;
+  persona['likes'].push(cookie.favFood, cookie.color);
   persona.insanity = cookie.insanity;
-  //possibly insanity variation function
+
   return persona;
 }
 

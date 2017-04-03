@@ -9,9 +9,13 @@ var router = express.Router();
 
 router.get("/", function(req, res, next) {
   console.log(req.cookies.persona)
-  persona = generatePersona(req.cookies.persona);
-  console.log(persona)
-  res.render("index", {persona});
+  if (req.cookies.persona) {
+    persona = generatePersona(req.cookies.persona);
+    console.log(persona)
+    res.render("index", {persona});
+  } else {
+    res.render("index")
+  }
 });
 
 router.post("/update", function(req, res, next) {

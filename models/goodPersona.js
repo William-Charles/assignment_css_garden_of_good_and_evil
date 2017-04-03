@@ -7,7 +7,11 @@ const good = {
     'death metal'
     ],
 
-  dislikes: []
+  dislikes: [],
+  styles: {
+    page: "container good"
+  }
+
 }
 
 module.exports = good

@@ -22,6 +22,16 @@ input, select {
   margin: auto;
 }
 
+.evil{
+  background: black;
+  color: red;
+}
+
+.good{
+  background: white;
+  color: #666;
+}
+
 .properties-form-container {
   border: 2px solid #666;
   border-radius: 6px;
