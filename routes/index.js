@@ -12,9 +12,13 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/", function(req, res, next) {
-  const id = req.params.goodEvil;
+  const id = req.body
+  let likes = req.cookies.likes || [];
   console.log(id);
+  res.cookie("likes", id);
+  console.log(req.cookies.likes)
   res.render("index");
 });
 
 module.exports = router;
+
