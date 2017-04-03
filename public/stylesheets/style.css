@@ -11,17 +11,19 @@ h1 {
   font-size: 3em;
 }
 
-input {
+input, select {
   margin-right: 14px;
 }
 
 .container {
+  width: 80%;
   display: block;
   text-align: center;
+  margin: auto;
 }
 
 .properties-form-container {
   border: 2px solid #666;
-  border-radius: 3px;
+  border-radius: 6px;
   padding-bottom: 20px;
 }

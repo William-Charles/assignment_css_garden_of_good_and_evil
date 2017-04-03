@@ -4,15 +4,15 @@
 <br>
 <br>
 <div class="properties-form-container">
-<form class="properties-form" action="/" method="post">
+<form class="properties-form" action="/update" method="post">
   <h3>Properties</h3>
   <label for="good">Good</label>
     <input type="radio" name="goodEvil" value="good">
   <label for="evil">Evil</label>
     <input type="radio" name="goodEvil" value="evil">
   <br><br>
-  <label for="fav-food">Favorite Food</label>
-    <input type="text" name="fav-food">
+  <label for="favFood">Favorite Food</label>
+    <input type="text" name="favFood">
     
   <label for="color">Favorite Color</label>
     <select class="" name="color">
@@ -28,10 +28,20 @@
     <input type="submit">
 </form>
 </div>
-<h2>Favorite Things</h2>
-<ul>
-{{#each personaTrait as |trait|}}
-  <li>{{trait}}</li>
-{{/each}}
-</ul>
+<div class="favorite-things-container">
+  <h2>Favorite Things</h2>
+  <ul>
+  {{#each persona.likes as |like|}}
+    <li>{{like}}</li>
+  {{/each}}
+  </ul>
+</div>
+<div class="not-so-favorite-things-container">
+  <h2>Not So Favorite Things</h2>
+  <ul>
+  {{#each persona.likes as |like|}}
+    <li>{{like}}</li>
+  {{/each}}
+  </ul>
+</div>
 </div>

@@ -1,4 +1,5 @@
 var express = require("express");
+var generatePersona = require('../bin/generatePersona')
 var router = express.Router();
 
 /* GET home page. */
@@ -7,18 +8,21 @@ var router = express.Router();
 // if cookie() is evil chage class of body dark background
 
 router.get("/", function(req, res, next) {
-  //likes = generateLikes(req.cookies);
-  res.render("index");
+  console.log(req.cookies.persona)
+  persona = generatePersona(req.cookies.persona);
+  console.log(persona)
+  res.render("index", {persona});
 });
 
-router.post("/", function(req, res, next) {
-  const id = req.body
-  let likes = req.cookies.likes || [];
-  console.log(id);
-  res.cookie("likes", id);
-  console.log(req.cookies.likes)
-  res.render("index");
+router.post("/update", function(req, res, next) {
+  let persona = req.body;
+  res.cookie("persona", persona)
+  res.redirect('/');
 });
 
 module.exports = router;
 
+// app.get("/", (req, res) => {
+// const favorites = req.cookies.favorites;
+// res.render("home", { favorites });
+// });
