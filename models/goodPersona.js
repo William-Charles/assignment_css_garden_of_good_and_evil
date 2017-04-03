@@ -10,7 +10,7 @@ const good = {
   dislikes: [],
   styles: {
     page: "container good"
-  }
+  },
 
 }
 

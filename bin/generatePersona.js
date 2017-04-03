@@ -1,32 +1,28 @@
 const good = require("../models/goodPersona");
 const evil = require("../models/evilPersona");
+const {setInsanityAttr,
+        generateBio
+      } = require("./helpers")
 
 function generatePersona(cookie) {
   let persona = {};
+  let insanityLevel = setInsanityAttr(cookie.insanity);
+
   if (cookie.goodEvil === "good") {
     persona = good;
+    persona["bio"] = generateBio('good', insanityLevel)
   } else {
     persona = evil;
+    persona["bio"] = generateBio('evil', insanityLevel)
   }
 
-  persona.styles["insanity"] = setInsanityAttr(cookie.insanity);
-  persona["likes"].push(cookie.favFood, cookie.color);
-  persona.insanity = cookie.insanity;
+  persona.styles["insanity"] = insanityLevel
+  persona["food"] = cookie.favFood;
+  persona["color"] = cookie.color;
+  persona.styles["color"] = cookie.color;
+  console.log(persona)
 
   return persona;
-}
-
-function setInsanityAttr(num) {
-  console.log("into the function");
-  num = Number(num);
-
-  if (num < 4) {
-    return "sane";
-  } else if (num >= 4 && num < 7) {
-    return "crazy";
-  } else {
-    return "psycho";
-  }
 }
 
 module.exports = generatePersona;

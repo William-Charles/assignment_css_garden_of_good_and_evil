@@ -31,9 +31,11 @@
 <div class="favorite-things-container">
   <h2>Favorite Things</h2>
   <ul>
+    <li>{{persona.food}}</li>
   {{#each persona.likes as |like|}}
     <li>{{like}}</li>
   {{/each}}
+    <li class="{{persona.styles.color}}">{{persona.color}}</li>
   </ul>
 </div>
 <div class="not-so-favorite-things-container">

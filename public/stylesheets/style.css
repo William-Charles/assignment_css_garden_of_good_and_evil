@@ -35,7 +35,7 @@ input, select {
   font-family: Helvetica;
 }
 .crazy{
-  font-family: 'comic-sans';
+  font-family: 'Comic Sans MS';
 }
 .psycho {
   font-family: webdings;
@@ -50,3 +50,17 @@ input, select {
 ul li {
   list-style-type: none;
 }
+
+
+.red{
+  color: red;
+}
+
+.green{
+  color: green;
+}
+
+.blue{
+  color: blue;
+}
+
