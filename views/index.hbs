@@ -5,9 +5,9 @@
 <form class="properties-form" action="/" method="post">
   <h3>Properties</h3>
   <label for="good">Good</label>
-    <input type="radio" name="good" value="good">
+    <input type="radio" name="goodEvil" value="good">
   <label for="evil">Evil</label>
-    <input type="radio" name="evil" value="evil">
+    <input type="radio" name="goodEvil" value="evil">
     <br>
   <label for="fav-food">Favorite Food</label>
     <input type="text" name="fav-food">
@@ -26,20 +26,8 @@
     <input type="submit" name="properties">
 </form>
 <h2>Favorite Things</h2>
+<ul>
 {{#each personaTrait as |trait|}}
-<ul>
-  <li>Blood Sausage</li>
-  <li>Blue</li>
-  <li>Anatomically correct hearts</li>
-  <li>Crystal serviceware</li>
-  <li>Gold bars</li>
-  <li>Pandas</li>
-</ul>
+  <li>{{trait}}</li>
 {{/each}}
-<h2>Opposite of Favorite Things</h2>
-
-<ul>
-  <li>Mud</li>
-  <li>Coyotes</li>
-  <li>Ferrets</li>
-  
+</ul>
