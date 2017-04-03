@@ -20,6 +20,8 @@ input, select {
   display: block;
   text-align: center;
   margin: auto;
+  padding: 40px 0px;
+
 }
 
 .evil{
@@ -52,15 +54,15 @@ ul li {
 }
 
 
-.red{
+.Red{
   color: red;
 }
 
-.green{
+.Green{
   color: green;
 }
 
-.blue{
+.Blue{
   color: blue;
 }
 

@@ -5,9 +5,15 @@ const good = {
     'pizza',
     'anatomically correct hearts',
     'death metal'
-    ],
+  ],
 
-  dislikes: [],
+  dislikes: [
+    'Graffitti Artists',
+    "the Devil's Cabbage",
+    "Rock and Roll",
+    "Gentrification"
+  ],
+
   styles: {
     page: "container good"
   },

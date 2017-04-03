@@ -12,22 +12,23 @@
     <input type="radio" name="goodEvil" value="evil">
   <br><br>
   <label for="favFood">Favorite Food</label>
-    <input type="text" name="favFood">
+    <input type="text" name="favFood" placeholder="{{persona.food}}">
 
   <label for="color">Favorite Color</label>
     <select class="" name="color">
-    <option value="red">red</option>
-    <option value="blue">blue</option>
-    <option value="green">green</option>
+    <option value="Red">red</option>
+    <option value="Blue">blue</option>
+    <option value="Green">green</option>
   </select>
 
   <label for="insanity">Insanity Level</label>
     <input type="range" name="insanity" min="1"
-  max="10" step="1">
+  max="10" step="1" value="{{persona.insanityLevel}}">
   <br><br>
     <input type="submit">
 </form>
 </div>
+
 <div class="favorite-things-container">
   <h2>Favorite Things</h2>
   <ul>
@@ -42,7 +43,7 @@
   <h2>Not So Favorite Things</h2>
   <ul>
   {{#each persona.dislikes as |dislike|}}
-    <li>{{disike}}</li>
+    <li>{{dislike}}</li>
   {{/each}}
   </ul>
 </div>

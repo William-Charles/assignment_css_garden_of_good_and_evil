@@ -1,13 +1,19 @@
 const evil = {
-  likes: ["cats", "Brunch", "Donald Trump", "Bill O'Rielly"],
+  likes: [
+    "Cats", 
+    "Brunch", 
+    "Donald Trump", 
+    "Bill O'Rielly"
+  ],
 
   dislikes: [
-    "puppies",
-    "doggies",
-    "pizza",
-    "anatomically correct hearts",
-    "death metal"
+    "Puppies",
+    "Doggies",
+    "Pizza",
+    "Anatomically correct hearts",
+    "Death metal"
   ],
+
   styles: {
     page: "container evil"
   }
